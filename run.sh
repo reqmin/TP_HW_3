@@ -34,8 +34,11 @@ then
 elif [ "$1" == "clear_data" ]
 then
     cd data
-    rm data.csv
-    rm report.html
+    rm -f data.csv
+    rm -f report.html
+    cd ..
+    cd local_data
+    rm -f data.csv
 
 elif [ "$1" == "inside_generator" ]
 then
